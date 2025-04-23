@@ -26,6 +26,13 @@ def get_metadata():
         'caratula': 'https://example.com/caratula.jpg'
     })
 
+# GET: Obtener la URL del streaming
+@app.route('/stream', methods=['GET'])
+def get_stream_url():
+    return jsonify({
+        'streaming_url': "https://mox.moxapps.shop/stream"
+    })
+
 # GET: Obtener todos los elementos
 @app.route('/api/items', methods=['GET'])
 def get_items():
